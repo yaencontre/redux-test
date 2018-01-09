@@ -1,5 +1,9 @@
 # redux-test
 
+## Install Redux DevTools Extension
+
+See [Redux DevTools Extension](http://extension.remotedev.io/)
+
 ## Update node
 
 ```
