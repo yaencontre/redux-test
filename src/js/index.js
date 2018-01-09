@@ -1,25 +1,4 @@
-import { createStore } from 'redux';
-
-const initialState = [
-    { title: 'Black in black' },
-    { title: 'For those about to rock' },
-    { title: 'Thunderstruck' }
-];
-
-const reducer = function (state, action) {
-    switch (action.type) {
-        case 'ADD_SONG':
-            return [...state, action.payload];
-        default:
-            return state
-    }
-};
-
-const store = createStore(
-    reducer,
-    initialState,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import store from './store';
 
 function render() {
     const $container = document.getElementById('playlist');
@@ -34,8 +13,10 @@ function render() {
 }
 render();
 
+
 const  $form = document.getElementById('form');
 $form.addEventListener('submit', handleSubmit);
+
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -48,10 +29,11 @@ function handleSubmit(event) {
     });
 }
 
+
 function handleChange() {
     render();
 }
 
-store.subscribe(handleChange);
 
+store.subscribe(handleChange);
 console.log(store.getState());
