@@ -1,6 +1,7 @@
 /node_modules/
 /public/dist/
 /tests/coverage/
+modules-manifest.json
 
 # IDE
 /.idea/

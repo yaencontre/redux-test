@@ -2,7 +2,11 @@
   "name": "redux-test-jht",
   "version": "1.0.0",
   "description": "Demo webpack, jest and redux features",
-  "keywords": [ "webpack", "redux", "jest" ],
+  "keywords": [
+    "webpack",
+    "redux",
+    "jest"
+  ],
   "author": "J. Ginés",
   "license": "MIT",
   "homepage": "https://github.com/yaencontre/redux-test#readme",
@@ -20,11 +24,13 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "build:watch": "webpack --watch"
+    "build:watch": "webpack --watch",
+    "build:dll": "webpack --config ./webpack.dll.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.8",

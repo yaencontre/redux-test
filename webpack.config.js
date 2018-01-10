@@ -1,17 +1,20 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-//const webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
         main: [
             path.resolve(__dirname, 'src/js/index.js'),
             path.resolve(__dirname, 'src/css/style.scss')
-        ]
+        ],
+        dynamic: path.resolve(__dirname, 'src/js/dynamic.js')
     },
     output: {
         path: path.resolve(__dirname, 'public/dist'),
-        filename: 'js/[name].js'
+        filename: 'js/[name].js',
+        publicPath: '/dist/',
+        chunkFilename: 'js/[id].[chunkhash].js',
     },
     devtool: 'eval-source-map',
     module: {
@@ -24,11 +27,13 @@ module.exports = {
                 })
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["env"]
+                        presets: ["env"],
+                        plugins: ["syntax-dynamic-import"]
                     }
                 }
             }
@@ -38,7 +43,10 @@ module.exports = {
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'common'
         // }),
-        new ExtractTextPlugin("css/[name].css")
+        new ExtractTextPlugin("css/[name].css"),
+        new webpack.DllReferencePlugin({
+            manifest: require('./modules-manifest')
+        })
     ]
 };
 
