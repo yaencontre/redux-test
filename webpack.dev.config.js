@@ -17,23 +17,14 @@ module.exports = {
         publicPath: '/dist/',
         chunkFilename: 'js/[id].[chunkhash].js',
     },
+    devtool: "source-map",
     module: {
         rules: [
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: true
-                            }
-                        },
-                        {
-                            loader: "sass-loader"
-                        }
-                    ]
+                    use: ["css-loader", "sass-loader"]
                 })
             },
             {
@@ -51,7 +42,6 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['public/dist'], {
-            root: __dirname,
             exclude: ['lib']
         }),
         new ExtractTextPlugin("css/[name].css"),
@@ -60,4 +50,3 @@ module.exports = {
         })
     ]
 };
-

@@ -23,9 +23,10 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack",
-    "build:watch": "webpack --watch",
-    "build:dll": "webpack --config ./webpack.dll.config.js"
+    "build:watch": "webpack --watch --config ./webpack.dev.config.js",
+    "build:dll": "webpack --config ./webpack.dll.config.js",
+    "build:dev": "webpack --config ./webpack.dev.config.js",
+    "build:prod": "webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,6 +34,7 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",

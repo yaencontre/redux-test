@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'public/dist'),
-        filename: 'js/[name].js',
+        filename: 'lib/[name].js',
         library: "[name]"
     },
     plugins: [
