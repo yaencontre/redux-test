@@ -18,6 +18,10 @@ module.exports = {
         chunkFilename: 'js/[id].[chunkhash].js',
     },
     devtool: "source-map",
+    devServer: {
+        port: 9000,
+        contentBase: path.resolve(__dirname, 'public')
+    },
     module: {
         rules: [
             {

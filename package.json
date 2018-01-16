@@ -26,6 +26,7 @@
     "build:watch": "webpack --watch --config ./webpack.dev.config.js",
     "build:dll": "webpack --config ./webpack.dll.config.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
+    "build:dev:up": "webpack-dev-server --config ./webpack.dev.config.js",
     "build:prod": "webpack -p"
   },
   "devDependencies": {
@@ -43,7 +44,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
   },
   "dependencies": {
     "redux": "^3.7.2"
