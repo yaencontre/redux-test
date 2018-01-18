@@ -56,7 +56,7 @@ To run unit tests
 $ npm run test
 ```
 
-To create others commands edit package.json
+To create others commands edit `package.json` 
 
 
 
