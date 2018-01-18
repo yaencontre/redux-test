@@ -3,4 +3,9 @@ describe('Demo some test', () => {
         let val = true;
         expect(val).toEqual(true);
     });
+
+    it('This is other test', () => {
+        let val = true;
+        expect(val).toEqual(true);
+    });
 });
