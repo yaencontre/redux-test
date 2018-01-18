@@ -38,7 +38,7 @@ If you preferer build the project without development server
 $ npm run build:dev
 ```
 
-To deploy this project in production, launch this command
+To build the proyect to deploy in production, launch this command
 
 ```
 $ npm run build:prod
