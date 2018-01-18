@@ -29,7 +29,12 @@ $ npm run build:dll
 If you want build the proyect with a development server that provides auto complilling and live reloading (recomended), launch this command
 
 ```
-$ npm run build:dev:up
+npm run build:dev:server-up
+```
+
+or 
+```
+npm start
 ```
 
 If you preferer build the project without development server
@@ -47,13 +52,19 @@ $ npm run build:prod
 To build the project and auto compilling when assets has changes, launch this command (without development server)
 
 ```
-npm run build:watch
+npm run build:dev:watch
 ```
 
 To run unit tests
 
 ```
 $ npm run test
+```
+
+or
+
+```
+$ npm t
 ```
 
 To create others commands edit `package.json` 

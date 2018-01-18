@@ -23,10 +23,11 @@
   },
   "scripts": {
     "test": "jest",
-    "build:watch": "webpack --watch --config ./webpack.dev.config.js",
+    "start": "npm run build:dev:server-up",
     "build:dll": "webpack --config ./webpack.dll.config.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
-    "build:dev:up": "webpack-dev-server --config ./webpack.dev.config.js",
+    "build:dev:server-up": "webpack-dev-server --config ./webpack.dev.config.js",
+    "build:dev:watch": "webpack --watch --config ./webpack.dev.config.js",
     "build:prod": "webpack -p"
   },
   "devDependencies": {
