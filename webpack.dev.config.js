@@ -41,6 +41,15 @@ module.exports = {
                         plugins: ["syntax-dynamic-import"]
                     }
                 }
+            },
+            {
+                test: /\.twig$/,
+                use: {
+                    loader: "twig-loader",
+                    options: {
+                        node: { fs: "empty" }
+                    }
+                }
             }
         ]
     },

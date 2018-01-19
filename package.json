@@ -49,6 +49,8 @@
     "webpack-dev-server": "^2.11.0"
   },
   "dependencies": {
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "twig": "^1.10.5",
+    "twig-loader": "^0.3.1"
   }
 }
