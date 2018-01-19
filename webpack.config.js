@@ -9,7 +9,11 @@ module.exports = {
             path.resolve(__dirname, 'src/js/index.js'),
             path.resolve(__dirname, 'src/css/style.scss')
         ],
-        dynamic: path.resolve(__dirname, 'src/js/dynamic.js')
+        dynamic: path.resolve(__dirname, 'src/js/dynamic.js'),
+        tsMain: [
+            path.resolve(__dirname, 'src/ts/1_basic.ts'),
+            path.resolve(__dirname, 'src/ts/2_example_interface.ts'),
+        ]
     },
     output: {
         path: path.resolve(__dirname, 'public/dist'),
@@ -44,6 +48,22 @@ module.exports = {
                     options: {
                         presets: ["env"],
                         plugins: ["syntax-dynamic-import"]
+                    }
+                }
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "ts-loader"
+                }
+            },
+            {
+                test: /\.twig$/,
+                use: {
+                    loader: "twig-loader",
+                    options: {
+                        node: { fs: "empty" }
                     }
                 }
             }
