@@ -1,4 +1,4 @@
-function alertaTs(msg:string) {
+function alertaTs(msg:string) :void {
     alert(msg)
 }
 

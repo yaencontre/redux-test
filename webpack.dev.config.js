@@ -13,6 +13,8 @@ module.exports = {
         tsMain: [
             path.resolve(__dirname, 'src/ts/1_basic.ts'),
             path.resolve(__dirname, 'src/ts/2_example_interface.ts'),
+            path.resolve(__dirname, 'src/ts/3_types.ts'),
+            path.resolve(__dirname, 'src/ts/4_this.ts'),
         ]
     },
     output: {
@@ -48,10 +50,7 @@ module.exports = {
             },
             {
                 test: /\.(ts|tsx)$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "ts-loader"
-                }
+                use: "ts-loader"
             },
             {
                 test: /\.twig$/,

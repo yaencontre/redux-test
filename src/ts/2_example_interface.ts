@@ -3,7 +3,7 @@ interface PersonInterface {
     age:number
 }
 
-function showPerson(person:PersonInterface) {
+function showPerson(person:PersonInterface) :void {
     /**
      * console.log('Name: ' + person.name + ' age: ' + person.age)
      *
@@ -14,8 +14,8 @@ function showPerson(person:PersonInterface) {
 showPerson({name: 'Palomino', age: 33 });
 
 
-
-function showPersons(persons:PersonInterface[]) {
+//function showPersons(persons:Array<PersonInterface>) :void {
+function showPersons(persons:PersonInterface[]) :void {
     /**
      * persons.map(function (person) {
      *     showPerson(person)
