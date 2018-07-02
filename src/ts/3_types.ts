@@ -1,5 +1,4 @@
 /** types */
-import {defaultCoreCipherList} from "constants";
 
 let decimal: number = 6;
 let hex: number = 0xf00d;
